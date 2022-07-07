@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento com Align Self</title>
+    <Style>
+        .container {
+            display: flex;
+            max-width: 350px;
+            border: 2px solid;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+        
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+        
+        .end {
+            align-self: flex-end;
+        }
+
+        .baselin {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+    </Style>
+</head>
+<body>
+    <div class="container">
+        <div class="item auto">AAA123</div>
+        <div class="item auto">Lorem ipsum is therefore free from repetition</div>
+        <div class="item auto">ITEM</div>
+        <div class="item auto">4</div>
+    </div>
+    <div class="container">
+        <div class="item stretch">AAA123</div>
+        <div class="item auto">Lorem ipsum is therefore free from repetition</div>
+        <div class="item auto">ITEM</div>
+        <div class="item end">4</div>
+    </div>
+</body>
+</html>
