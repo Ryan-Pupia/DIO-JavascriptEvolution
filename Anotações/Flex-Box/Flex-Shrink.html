@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento de Flex-Shrink</title>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            max-width: 350px;
+        }
+
+        .item {
+            margin: 5px;
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .s1 {
+            flex-shrink: 1;
+        }
+
+        .fg1 {
+            flex-grow: 1;
+        }
+
+        .s0 {
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .s2 {
+            flex-shrink: 2;
+        }
+
+        .s3 {
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex-Shrink: 1</p>
+    <div class="container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s1 fg1">B</div>
+        <div class="item s1 fg1">C</div>
+        <div class="item s1 fg1">D</div>
+        <div class="item s1 fg1">E</div>
+    </div>
+    <div class="container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s1 fg1">The Generated Lorem Ipsum</div>
+        <div class="item s1 fg1">C</div>
+        <div class="item s1 fg1">D</div>
+        <div class="item s1 fg1">E</div>
+    </div>
+    <p>Flex-Shrink: 0 /Basis: 100px</p>
+    <div class="container">
+        <div class="item s0 fg1">A</div>
+        <div class="item s0 fg1">The Generated Lorem Ipsum</div>
+        <div class="item s0 fg1">C</div>
+        <div class="item s0 fg1">D</div>
+        <div class="item s0 fg1">E</div>
+    </div>
+    <p>Flex-Shrink: 1, 2 e 3</p>
+    <div class="container">
+        <div class="item s1 fg1">A</div>
+        <div class="item s2 fg1">The Generated Lorem Ipsum</div>
+        <div class="item s2 fg1">C</div>
+        <div class="item s3 fg1">D</div>
+        <div class="item s1 fg1">E</div>
+    </div>
+</body>
+</html>
